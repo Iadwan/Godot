@@ -17,7 +17,7 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		return
 
-	# Add the gravity.
+	# Add the gravity.s
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
