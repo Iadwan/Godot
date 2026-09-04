@@ -16,7 +16,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = vertical_input * LADDER_SPEED
 		move_and_slide()
 		return
-
+		
 	# Add the gravity.s
 	if not is_on_floor():
 		velocity += get_gravity() * delta

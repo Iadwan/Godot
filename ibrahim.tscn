@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://b8kf01i44oelb"]
+
+[ext_resource type="Texture2D" uid="uid://dags86lcgl7ui" path="res://assets/jump.png" id="1_8asa4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hppm1"]
+atlas = ExtResource("1_8asa4")
+region = Rect2(0, 0, 495, 793)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrwjt"]
+atlas = ExtResource("1_8asa4")
+region = Rect2(495, 0, 495, 793)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0s7h"]
+atlas = ExtResource("1_8asa4")
+region = Rect2(990, 0, 495, 793)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dloyl"]
+atlas = ExtResource("1_8asa4")
+region = Rect2(1485, 0, 495, 793)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v8v7f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hppm1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xrwjt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0s7h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dloyl")
+}],
+"loop": 1,
+"name": &"ibrajump",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nic1f"]
+radius = 194.41174
+height = 594.7499
+
+[node name="Ibrahim" type="Node2D" unique_id=1198218958]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=989118645]
+position = Vector2(84.00002, 12)
+scale = Vector2(0.0514372, 0.060529634)
+sprite_frames = SubResource("SpriteFrames_v8v7f")
+animation = &"ibrajump"
+autoplay = "ibrajump"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=80461953]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1132960636]
+position = Vector2(83.99999, 17.000004)
+scale = Vector2(0.0514372, 0.060529634)
+shape = SubResource("CapsuleShape2D_nic1f")
