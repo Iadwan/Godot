@@ -6,7 +6,7 @@ extends CharacterBody2D
 
 const SPEED = 100.0
 const JUMP_VELOCITY = -350.0
-const LADDER_SPEED = 70.0
+const LADDER_SPEED = 100.0
 
 func _ready() -> void:
 	print("Position: " + str($Sprite2D.position))
@@ -26,7 +26,7 @@ func _physics_process(delta: float) -> void:
 		get_tree().change_scene_to_file("res://game_over.tscn")
 		return
 		
-	
+	#Climbing ladder
 	if on_ladder and vertical_input != 0:
 		velocity.x = 0
 		velocity.y = vertical_input * LADDER_SPEED
